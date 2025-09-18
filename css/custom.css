@@ -7,6 +7,9 @@
 .fa-whatsapp:before, 
 .fa-google:before, 
 .fa-youtube-play:before { font-family: "Font Awesome 7 Brands"; }
+
+.fa-photo {content:'\f302'}
+
 .nav-bar .navbar-brand img { padding: 15px }
 
 .modal-dialog .text-center img { width: 100%; filter: brightness(0);}
