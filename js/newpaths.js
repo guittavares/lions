@@ -7,14 +7,10 @@ window.addEventListener('load', () => {
     ];
 
     document.querySelectorAll('.service-icon svg').forEach(svg => {
-        const firstPath = svg.querySelector('path');
-        if (!firstPath) return;
-        const d = firstPath.getAttribute('d') || '';
-        const match = replacements.find(item =>
-            d.startsWith(item.signature)
-        );
-        if (!match) return;
-        svg.innerHTML = `<path d="${match.path}"></path>`;
-        svg.setAttribute('viewBox', match.viewBox);
-    });
+    const path = svg.querySelector('path');
+    if (!path) return;
+    const d = path.getAttribute('d') || '';
+    const match = replacements.find(item =>d.startsWith(item.signature));
+    if (!match) return;
+    svg.outerHTML = '<img src="${match.svg}" width="32" height="32" alt="">';
 });
