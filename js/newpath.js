@@ -10,5 +10,5 @@ window.addEventListener('load', () => {
     const d = path.getAttribute('d') || '';
     const match = replacements.find(item =>d.startsWith(item.signature));
     if (!match) return;
-    svg.outerHTML = '<img src="${match.svg}" width="32" height="32" alt="">';
+    svg.outerHTML = `<img src="${match.svg}" width="32" height="32" alt="">`;
 });
