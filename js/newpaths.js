@@ -5,10 +5,11 @@ window.addEventListener('load', () => {
     ];
 
     document.querySelectorAll('.service-icon svg').forEach(svg => {
-    const path = svg.querySelector('path');
-    if (!path) return;
-    const d = path.getAttribute('d') || '';
-    const match = replacements.find(item =>d.startsWith(item.signature));
-    if (!match) return;
-    svg.outerHTML = `<img src="${match.svg}" width="32" height="32" alt="">`;
+       const path = svg.querySelector('path');
+       if (!path) return;
+       const d = path.getAttribute('d') || '';
+       const match = replacements.find(item =>d.startsWith(item.signature));
+       if (!match) return;
+       svg.outerHTML = `<img src="${match.svg}" width="32" height="32" alt="">`;
+   });
 });
